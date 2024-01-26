@@ -18,8 +18,8 @@ app.use(cors());
 
 app.get('/',(req,res)=>{
   res.json({
-    author:'Furkan Karakuzu',
-    message:'Hello from mongoose!'
+    author:'Edward Lampoh',
+    message:'Hello!'
   })
 })
 
