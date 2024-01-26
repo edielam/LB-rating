@@ -47,7 +47,7 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}
       <Link color="inherit" to="#goSomewhere">
-        VOTING{" "}
+        LB-Rating{" "}
       </Link>
       {new Date().getFullYear()}
     </Typography>
@@ -81,7 +81,7 @@ export default function SignIn() {
           <img src={logo} style={{ width: 120 }} alt="Logo" />
 
           <Typography style={{ marginBottom: 10 }}  component="h4" variant="h4">
-            Welcome to VOTING
+            Welcome to Sudbury
           </Typography>
 
           <Typography component="h1" variant="h5">

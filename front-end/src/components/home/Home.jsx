@@ -9,13 +9,15 @@ import Avatar from "@material-ui/core/Avatar";
 import Rating from "@material-ui/lab/Rating";
 import LocationOnTwoToneIcon from "@material-ui/icons/LocationOnTwoTone";
 import BusinessTwoToneIcon from "@material-ui/icons/BusinessTwoTone";
+import dummyBusinesses from "../../data/fakeData";
 
 const Home = (props) => {
-  const [datas, setDatas] = useState([])
-  useEffect(() =>fetch("https://voting-back-end.herokuapp.com/companies")
-      .then(response=>response.json())
-      .then(data=>setDatas(data.reverse()))
-  ,[])
+  // const [datas, setDatas] = useState([])
+  // useEffect(() =>fetch("https://voting-back-end.herokuapp.com/companies")
+  //     .then(response=>response.json())
+  //     .then(data=>setDatas(data.reverse()))
+  // ,[])
+  const [datas, setDatas] = useState(dummyBusinesses);
   const useStyles = makeStyles((theme) => ({
     root: {
       display: "flex",

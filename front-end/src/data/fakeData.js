@@ -1,107 +1,139 @@
-const fakeData = [
-    {
-      id: 1,
-      company: "Apple",
-      location: "Berlin",
-      NumberOfStar: 5
-    },
-  
-    {
-      id: 2,
-      company: "Facebook",
-      location: "California",
-      NumberOfStar: 4
-    },
-  
-    {
-      id: 3,
-      company: "Deezer",
-      location: "Paris",
-      NumberOfStar: 3
-    },
-  
-    {
-      id: 4,
-      company: "Amazon",
-      location: "London",
-      NumberOfStar: 2.5
-    },
-  
-    {
-      id: 5,
-      company: "Spotify",
-      location: "Stockholm",
-      NumberOfStar: 4
-    },
-    {
-      id: 6,
-      company: "Cisco",
-      location: "Berlin",
-      NumberOfStar: 5
-    },
-  
-    {
-      id: 7,
-      company: "Samsung",
-      location: "San Francisco",
-      NumberOfStar: 4
-    },
-  
-    {
-      id: 8,
-      company: "Netflix",
-      location: "Los Angeles",
-      NumberOfStar: 3
-    },
-  
-    {
-      id: 9,
-      company: "Microsoft",
-      location: "Chicago",
-      NumberOfStar: 2.5
-    },
-  
-    {
-      id: 10,
-      company: "Tesla",
-      location: "Washington",
-      NumberOfStar: 4
-    },
-    {
-      id: 11,
-      company: "Dell",
-      location: "Budapest",
-      NumberOfStar: 5
-    },
-  
-    {
-      id: 12,
-      company: "Airbnb",
-      location: "Napoli",
-      NumberOfStar: 4
-    },
-  
-    {
-      id: 13,
-      company: "Booking",
-      location: "Munich",
-      NumberOfStar: 3
-    },
-  
-    {
-      id: 14,
-      company: "Paypal",
-      location: "Rome",
-      NumberOfStar: 2.5
-    },
-  
-    {
-      id: 15,
-      company: "Intel",
-      location: "Istanbul",
-      NumberOfStar: 4.6
-    }
-  ];
-  
-  export default fakeData;
-  
+const dummyBusinesses = [
+  {
+    _id: 1,
+    isim: "Joe's Coffee Shop",
+    sehir: "Berlin",
+    oy_1: 5,
+    oy_2: 4.5,
+    oy_3: 4,
+    oy_4: 3.5,
+  },
+  {
+    _id: 2,
+    isim: "Sunny Bakery",
+    sehir: "California",
+    oy_1: 4,
+    oy_2: 3.5,
+    oy_3: 3,
+    oy_4: 2.5,
+  },
+  {
+    _id: 3,
+    isim: "Parisian Florist",
+    sehir: "Paris",
+    oy_1: 3,
+    oy_2: 2.5,
+    oy_3: 2,
+    oy_4: 1.5,
+  },
+  {
+    _id: 4,
+    isim: "London Bookstore",
+    sehir: "London",
+    oy_1: 2.5,
+    oy_2: 2,
+    oy_3: 1.5,
+    oy_4: 1,
+  },
+  {
+    _id: 5,
+    isim: "Stockholm Music Store",
+    sehir: "Stockholm",
+    oy_1: 4,
+    oy_2: 3.5,
+    oy_3: 3,
+    oy_4: 2.5,
+  },
+  {
+    _id: 6,
+    isim: "Berlin Tech Hub",
+    sehir: "Berlin",
+    oy_1: 5,
+    oy_2: 4.5,
+    oy_3: 4,
+    oy_4: 3.5,
+  },
+  {
+    _id: 7,
+    isim: "San Francisco Electronics",
+    sehir: "San Francisco",
+    oy_1: 4,
+    oy_2: 3.5,
+    oy_3: 3,
+    oy_4: 2.5,
+  },
+  {
+    _id: 8,
+    isim: "LA Fitness Studio",
+    sehir: "Los Angeles",
+    oy_1: 3,
+    oy_2: 2.5,
+    oy_3: 2,
+    oy_4: 1.5,
+  },
+  {
+    _id: 9,
+    isim: "Chicago Art Gallery",
+    sehir: "Chicago",
+    oy_1: 2.5,
+    oy_2: 2,
+    oy_3: 1.5,
+    oy_4: 1,
+  },
+  {
+    _id: 10,
+    isim: "Washington Auto Repair",
+    sehir: "Washington",
+    oy_1: 4,
+    oy_2: 3.5,
+    oy_3: 3,
+    oy_4: 2.5,
+  },
+  {
+    _id: 11,
+    isim: "Budapest Computer Services",
+    sehir: "Budapest",
+    oy_1: 5,
+    oy_2: 4.5,
+    oy_3: 4,
+    oy_4: 3.5,
+  },
+  {
+    _id: 12,
+    isim: "Napoli Vacation Rentals",
+    sehir: "Napoli",
+    oy_1: 4,
+    oy_2: 3.5,
+    oy_3: 3,
+    oy_4: 2.5,
+  },
+  {
+    _id: 13,
+    isim: "Munich Travel Agency",
+    sehir: "Munich",
+    oy_1: 3,
+    oy_2: 2.5,
+    oy_3: 2,
+    oy_4: 1.5,
+  },
+  {
+    _id: 14,
+    isim: "Rome Financial Consultants",
+    sehir: "Rome",
+    oy_1: 2.5,
+    oy_2: 2,
+    oy_3: 1.5,
+    oy_4: 1,
+  },
+  {
+    _id: 15,
+    isim: "Istanbul Tech Solutions",
+    sehir: "Istanbul",
+    oy_1: 4.6,
+    oy_2: 4.1,
+    oy_3: 3.7,
+    oy_4: 3.2,
+  },
+];
+
+export default dummyBusinesses;
