@@ -8,6 +8,7 @@ import { Formik, Field } from "formik";
 import { Switch } from "formik-material-ui";
 import { motion } from "framer-motion";
 import alertify from 'alertifyjs'
+import dummyUsers from "../../../data/dummyUsers";
 
 /* CSS */
 const useStyles = makeStyles((theme) => ({
@@ -31,38 +32,64 @@ const SignInForm = () => {
 
     const email = userEmail.current.value;
     const password = userPassword.current.value;
+    const user = dummyUsers.find((person) => person.email === email && person.password === password);
 
-    fetch("https://voting-back-end.herokuapp.com/users")
-    .then(res=>res.json())
-    .then(async data=>{
-      await data.map(async person=>{
-        if(person.email==email && person.password==password){
-          if(localStorage.getItem('user')){
-            localStorage.removeItem('id')
-            localStorage.removeItem('user')
-            localStorage.removeItem('name')
-            localStorage.removeItem('surname')
-            localStorage.removeItem('email')
-          }
-          setPersons(person)
-          localStorage.setItem("user",true)
-          localStorage.setItem('id',person._id)
-          localStorage.setItem('name',person.name)
-          localStorage.setItem('surname',person.surname)
-          localStorage.setItem('email',person.email)
-          alertify.success('Success!')
-          window.location.replace("/home");
-        }else{
-          console.log("Something Wrong")
-        }
-    })
-    if(!localStorage.getItem('user')){
-      alertify.error('Something Wrong')
+  if (user) {
+    if (localStorage.getItem('user')) {
+      localStorage.removeItem('id');
+      localStorage.removeItem('user');
+      localStorage.removeItem('name');
+      localStorage.removeItem('surname');
+      localStorage.removeItem('email');
     }
-  })
-    userEmail.current.value = "";
-    userPassword.current.value = "";
+    setPersons(user);
+    localStorage.setItem("user", true);
+    localStorage.setItem('id', user._id);
+    localStorage.setItem('name', user.name);
+    localStorage.setItem('surname', user.surname);
+    localStorage.setItem('email', user.email);
+    alertify.success('Success!');
+    window.location.replace("/home");
+  } else {
+    console.log("Something Wrong");
+    alertify.error('Something Wrong');
   }
+
+  userEmail.current.value = "";
+  userPassword.current.value = "";
+}
+
+  //   fetch("https://voting-back-end.herokuapp.com/users")
+  //   .then(res=>res.json())
+  //   .then(async data=>{
+  //     await data.map(async person=>{
+  //       if(person.email==email && person.password==password){
+  //         if(localStorage.getItem('user')){
+  //           localStorage.removeItem('id')
+  //           localStorage.removeItem('user')
+  //           localStorage.removeItem('name')
+  //           localStorage.removeItem('surname')
+  //           localStorage.removeItem('email')
+  //         }
+  //         setPersons(person)
+  //         localStorage.setItem("user",true)
+  //         localStorage.setItem('id',person._id)
+  //         localStorage.setItem('name',person.name)
+  //         localStorage.setItem('surname',person.surname)
+  //         localStorage.setItem('email',person.email)
+  //         alertify.success('Success!')
+  //         window.location.replace("/home");
+  //       }else{
+  //         console.log("Something Wrong")
+  //       }
+  //   })
+  //   if(!localStorage.getItem('user')){
+  //     alertify.error('Something Wrong')
+  //   }
+  // })
+  //   userEmail.current.value = "";
+  //   userPassword.current.value = "";
+  // }
 
   return (
     <>
