@@ -9,6 +9,7 @@ import { Switch } from "formik-material-ui";
 import { motion } from "framer-motion";
 import alertify from 'alertifyjs'
 import dummyUsers from "../../../data/dummyUsers";
+import { useNavigate } from "react-router-dom";
 
 /* CSS */
 const useStyles = makeStyles((theme) => ({
@@ -26,6 +27,7 @@ const SignInForm = () => {
   const [persons, setPersons]= React.useState([])
   const userEmail = useRef();
   const userPassword = useRef();
+  const navigate = useNavigate(); 
   /* Submit button */
   async function handleSubmit(event) {
     event.preventDefault();
@@ -49,7 +51,7 @@ const SignInForm = () => {
     localStorage.setItem('surname', user.surname);
     localStorage.setItem('email', user.email);
     alertify.success('Success!');
-    window.location.replace("/home");
+    navigate('/dashboard');
   } else {
     console.log("Something Wrong");
     alertify.error('Something Wrong');

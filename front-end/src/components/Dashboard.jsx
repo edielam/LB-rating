@@ -328,8 +328,7 @@ export default function Dashboard() {
   );
 
   return (
-    <Router>
-      <div className={classes.root}>
+    <div className={classes.root}>
         <CssBaseline />
         <AppBar
           style={{ backgroundColor: "#1e88e5" }}
@@ -458,6 +457,5 @@ export default function Dashboard() {
           <Copyright />
         </main>
       </div>
-    </Router>
   );
 }
