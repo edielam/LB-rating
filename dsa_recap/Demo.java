@@ -1,7 +1,7 @@
 public class Demo {
     public static void main(String[] args) {
-        int nums[] = {4,6,11,24,25};
-        int target = 11;
+        int nums[] = {4,6,11,24,25,33,67,96};
+        int target = 4;
 
         int result = BinarySearch(nums, target);
         if(result != -1){
@@ -22,17 +22,16 @@ public class Demo {
     public static int BinarySearch(int num[], int target){
         int start = 0;
         int end = num.length-1;
-        int mid = (start + end)/2;
 
-        while (start < end){
+        while (start <= end){
+            int mid = (start + end)/2;
             if(num[mid]==target){
                 return mid;
             }
             else if(num[mid]> target){
-                start = mid;
-            } else{
-                end = mid;
-            }
+                end = mid - 1;
+            } else
+                start = mid + 1;
         }
         return -1;
     }
