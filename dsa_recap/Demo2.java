@@ -2,15 +2,16 @@ public class Demo2 {
     public static void main(String[] args) {
         //int nums[] = {4,6,11,24,25,33,67,96};
         int nums[] = {1,5,2,78,12,11,67,3};
+        //int result[] = BubbleSort(nums); Putting it here will affect the original array
         System.out.println("Before sorting");
-        for(int num : nums){
-            System.out.print(num +" ");
+        for(int num1 : nums){
+            System.out.print(num1 +" ");
         }
-        int result[] = BubbleSort(nums);
+        int result[] = BubbleSort(nums); //Put it here, so the original array is only modified at this point
         System.out.println();
         System.out.println("After sorting");
-        for(int num : result){
-            System.out.print(num +" ");
+        for(int num2 : result){
+            System.out.print(num2 +" ");
         }
     }
     public static int[] BubbleSort(int num[]){
