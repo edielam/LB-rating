@@ -1,12 +1,12 @@
 public class Demo2 {
     public static void main(String[] args) {
         //int nums[] = {4,6,11,24,25,33,67,96};
-        int nums[] = {1,5,2,78,12,11,67};
-        int result[] = BubbleSort(nums);
+        int nums[] = {1,5,2,78,12,11,67,3};
         System.out.println("Before sorting");
         for(int num : nums){
             System.out.print(num +" ");
         }
+        int result[] = BubbleSort(nums);
         System.out.println();
         System.out.println("After sorting");
         for(int num : result){
