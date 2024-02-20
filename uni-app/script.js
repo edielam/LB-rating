@@ -201,44 +201,48 @@
                         "latestPageviewTimestamp": 1708019473771,
                         "metadataJSON": {
                             "all": {
-                                "@context": "http:\u002F\u002Fschema.org",
+                                "@context": "http://schema.org",
                                 "@type": "Organization",
                                 "address": {
                                     "@type": "PostalAddress",
-                                    "addressLocality": "Pittsburgh",
-                                    "addressRegion": "Pennsylvania",
-                                    "postalCode": "15232",
-                                    "streetAddress": "5830 Ellsworth Ave. #101"
+                                    "addressLocality": "Sudbury",
+                                    "addressRegion": "Ontario",
+                                    "postalCode": "P3E 2C6",
+                                    "streetAddress": "935 Ramsey Lake Rd"
                                 },
-                                "alternateName": "Niche.com, Inc.",
-                                "logo": "https:\u002F\u002Fd33a4decm84gsn.cloudfront.net\u002Fniche-logo.png",
-                                "name": "Niche",
+                                "alternateName": "Uni-Compare",
+                                "logo": "https://example.com/uni-compare-logo.png",
+                                "name": "Uni-Compare",
                                 "potentialAction": {
                                     "@type": "SearchAction",
                                     "query": {
                                         "input": "required name=search_term_string"
                                     },
-                                    "target": "https:\u002F\u002Fwww.niche.com\u002Fsearch\u002F?q={search_term_string}"
+                                    "target": "https://example.com/search?q={search_term_string}"
                                 },
-                                "sameAs": ["https:\u002F\u002Fwww.facebook.com\u002Fnichesocial", "https:\u002F\u002Fwww.twitter.com\u002FnicheSocial", "https:\u002F\u002Fplus.google.com\u002F+Nichesocial", "https:\u002F\u002Fwww.linkedin.com\u002Fcompany\u002Fnichesocial", "https:\u002F\u002Fwww.instagram.com\u002Fnichesocial\u002F"],
-                                "telephone": "(800) 290-2682",
-                                "url": "https:\u002F\u002Fwww.niche.com\u002F"
+                                "sameAs": [
+                                    "https://www.facebook.com/universitiescompare",
+                                    "https://twitter.com/universitiescomp",
+                                    "https://www.linkedin.com/company/universitiescompare"
+                                ],
+                                "telephone": "(800) 123-4567",
+                                "url": "https://example.com"
                             }
-                        },
+                        },                        
                         "metadataTags": {
-                            "canonical": "https:\u002F\u002Fwww.niche.com\u002F",
-                            "description": "Finding the right school shouldn't be hard. From K-12 to college to grad school, we make it easy to discover and connect with the best ones for you.",
-                            "og:description": "Finding the right school shouldn't be hard. From K-12 to college to grad school, we make it easy to discover and connect with the best ones for you.",
-                            "og:image": "https:\u002F\u002Fd33a4decm84gsn.cloudfront.net\u002Fniche-social-share.png",
+                            "canonical": "https://example.com",
+                            "description": "Compare universities based on quantitative ratings, user-generated comments, and engagement features. Make informed decisions with our comprehensive tool.",
+                            "og:description": "Compare universities based on quantitative ratings, user-generated comments, and engagement features. Make informed decisions with our comprehensive tool.",
+                            "og:image": "https://example.com/uni-compare.png",
                             "og:image:height": "1000",
                             "og:image:width": "1910",
-                            "og:title": "Find the School that Fits You Best",
+                            "og:title": "Uni-Compare",
                             "og:type": "website",
-                            "og:url": "https:\u002F\u002Fwww.niche.com\u002F",
-                            "title": "Find the School that Fits You Best - Niche",
+                            "og:url": "https://example.com",
+                            "title": "Uni-Compare",
                             "twitter:card": "summary_large_image",
-                            "twitter:site": "@NicheSocial"
-                        },
+                            "twitter:site": "@UniCompare"
+                        },                        
                         "navigation": {
                             "location": {
                                 "guid": "f931a1cd-e1b4-44bb-9e2c-b0d3e9241e98",
