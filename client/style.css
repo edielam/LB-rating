@@ -15,6 +15,7 @@ html {
   }
   .login-box{
     display: grid;
+    margin-top: 10px;
     grid-template-areas: "left right";
     max-width: 900px;
     background: rgba(0,0,0,.5);
@@ -51,7 +52,7 @@ html {
     padding: 10px 0;
     font-size: 16px;
     color: #fff;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     border: none;
     border-bottom: 1px solid #fff;
     outline: none;
@@ -235,6 +236,29 @@ html {
     text-align: center;
     width: 400px;
 }
+
+/* Existing CSS styles */
+
+.header {
+    position: center;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .title {
+    color: #fff;
+    font-family: 'Montserrat', serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+  }
   @keyframes btn-anim4 {
     0% {
       bottom: -100%;
@@ -244,3 +268,51 @@ html {
     }
   }
   
+  @media (max-width: 768px) {
+    .login-box {
+      grid-template-areas: "right";
+      max-width: 400px;
+    }
+  
+    .left-container {
+      display: none;
+    }
+  
+    .right-container {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .login-box {
+      max-width: 90%;
+      padding: 20px;
+    }
+  
+    .user-box input {
+      font-size: 14px;
+    }
+  
+    .user-box label {
+      font-size: 14px;
+    }
+  
+    .login-box form a {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  
+    .header {
+      top: 10px;
+      left: 10px;
+    }
+  
+    .logo {
+      height: 30px;
+    }
+  
+    .title {
+      font-size: 18px;
+    }
+  }
