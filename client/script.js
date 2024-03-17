@@ -35,7 +35,7 @@ form.addEventListener('submit', async (event) => {
       localStorage.setItem('phoneData', JSON.stringify(responseData));
 
       // Render the phone data on the page
-      renderPhoneData(responseData);
+      renderPhoneDataAsTable(responseData);
     } else {
       console.error('Error:', response.status);
     }
@@ -44,50 +44,6 @@ form.addEventListener('submit', async (event) => {
   }
 });
 
-// Function to render phone data on the page
-function renderPhoneData(phoneData) {
-  // Get the container for the grid
-  const gridContainer = document.getElementById('phone-grid');
-
-  // Clear existing content in the grid container
-  gridContainer.innerHTML = '';
-
-  // Iterate over the data and create HTML elements for each phone
-  Object.keys(phoneData).forEach(phoneName => {
-    const phone = phoneData[phoneName];
-
-    // Create a card element for each phone
-    const card = document.createElement('div');
-    card.classList.add('card');
-
-    // Create HTML content for the card
-    card.innerHTML = `
-      <img src="${phone.image}" alt="${phoneName}" class="phone-image">
-      <div class="phone-details">
-        <h2 class="phone-name">${phoneName}</h2>
-        <p><strong>Processor:</strong> ${phone.processor}</p>
-        <p><strong>RAM:</strong> ${phone.ram} GB</p>
-        <p><strong>ROM:</strong> ${phone.rom} GB</p>
-        <p><strong>Camera:</strong> ${phone.camera} MP</p>
-        <p><strong>Battery:</strong> ${phone.battery} mAh</p>
-        <p><strong>Rating:</strong> ${phone.rating}</p>
-        <p><strong>Budget:</strong> Rs. ${phone.budget}</p>
-      </div>
-    `;
-
-    // Append the card to the grid container
-    gridContainer.appendChild(card);
-  });
-}
-
-// Check if phone data exists in localStorage on page load
-document.addEventListener('DOMContentLoaded', () => {
-  const storedPhoneData = localStorage.getItem('phoneData');
-  if (storedPhoneData) {
-    // If phone data exists, parse it and render it on the page
-    renderPhoneData(JSON.parse(storedPhoneData));
-  }
-});
 // Function to render phone data as a table on the page
 function renderPhoneDataAsTable(phoneData) {
     // Get the container for the table
@@ -149,8 +105,53 @@ function renderPhoneDataAsTable(phoneData) {
 
 // Call renderPhoneDataAsTable with stored phone data on page load
 document.addEventListener('DOMContentLoaded', () => {
-  const storedPhoneData = localStorage.getItem('phoneData');
+  const storedPhoneData = sessionStorage.getItem('phoneData');
   if (storedPhoneData) {
     renderPhoneDataAsTable(JSON.parse(storedPhoneData));
   }
 });
+
+// Function to render phone data on the page
+// function renderPhoneData(phoneData) {
+//   // Get the container for the grid
+//   const gridContainer = document.getElementById('phone-grid');
+
+//   // Clear existing content in the grid container
+//   gridContainer.innerHTML = '';
+
+//   // Iterate over the data and create HTML elements for each phone
+//   Object.keys(phoneData).forEach(phoneName => {
+//     const phone = phoneData[phoneName];
+
+//     // Create a card element for each phone
+//     const card = document.createElement('div');
+//     card.classList.add('card');
+
+//     // Create HTML content for the card
+//     card.innerHTML = `
+//       <img src="${phone.image}" alt="${phoneName}" class="phone-image">
+//       <div class="phone-details">
+//         <h2 class="phone-name">${phoneName}</h2>
+//         <p><strong>Processor:</strong> ${phone.processor}</p>
+//         <p><strong>RAM:</strong> ${phone.ram} GB</p>
+//         <p><strong>ROM:</strong> ${phone.rom} GB</p>
+//         <p><strong>Camera:</strong> ${phone.camera} MP</p>
+//         <p><strong>Battery:</strong> ${phone.battery} mAh</p>
+//         <p><strong>Rating:</strong> ${phone.rating}</p>
+//         <p><strong>Budget:</strong> Rs. ${phone.budget}</p>
+//       </div>
+//     `;
+
+//     // Append the card to the grid container
+//     gridContainer.appendChild(card);
+//   });
+// }
+
+// // Check if phone data exists in localStorage on page load
+// document.addEventListener('DOMContentLoaded', () => {
+//   const storedPhoneData = localStorage.getItem('phoneData');
+//   if (storedPhoneData) {
+//     // If phone data exists, parse it and render it on the page
+//     renderPhoneData(JSON.parse(storedPhoneData));
+//   }
+// });

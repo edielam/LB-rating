@@ -11,7 +11,7 @@
     justify-items: center;
     width: 100vw;
     font-family: sans-serif;
-    background: linear-gradient(#739ce7, #2c75c9);
+    background: linear-gradient(#e7b378, #5d0d57);
   }
   .login-box{
     display: grid;
@@ -226,11 +226,11 @@
     border-bottom-left-radius: 10px;
 }
 
-.Rrrrr {
+/* .Rrrrr {
     font: bold italic 35px serif;
     fill: rgb(12, 85, 75);
     mix-blend-mode: darken; 
-  }
+  } */
 
 
 .right-container{
