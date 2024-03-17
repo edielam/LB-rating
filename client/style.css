@@ -1,17 +1,17 @@
-html {
+/* html {
     height: 100%;
-  }
+  } */
   body {
     align-items: center;
     display: flex;
     display: grid;
     font-size: 14px;
     font-weight: 400;
-    height: 100vh;
+    min-height: 100vh;
     justify-items: center;
     width: 100vw;
     font-family: sans-serif;
-    background: linear-gradient(#141e30, #243b55);
+    background: linear-gradient(#739ce7, #2c75c9);
   }
   .login-box{
     display: grid;
@@ -319,4 +319,34 @@ html {
     .title {
       font-size: 18px;
     }
+  }
+  /* CSS for styling the phone table */
+  .phone-table-container {
+    flex-grow: 1; /* Allow the container to expand */
+    overflow: auto; /* Add scrollbar when content overflows */
+    padding: 20px;
+  }
+  
+  .phone-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .phone-table th, .phone-table td {
+    padding: 12px;
+    border: 1px solid #dddddd;
+    text-align: left;
+  }
+  
+  .phone-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .phone-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .phone-table tbody tr:hover {
+    background-color: #f2f2f2;
   }
